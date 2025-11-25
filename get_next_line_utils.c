@@ -6,7 +6,7 @@
 /*   By: bkhalid <bkhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 16:40:59 by bkhalid           #+#    #+#             */
-/*   Updated: 2025/11/23 10:21:57 by bkhalid          ###   ########.fr       */
+/*   Updated: 2025/11/25 09:40:43 by bkhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[j] = '\0';
 	return (p);
 }
-
 
 char	*ft_strchr(const char *s, int c)
 {

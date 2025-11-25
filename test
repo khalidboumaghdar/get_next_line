@@ -1,7 +1,0 @@
-echo "# get_next_line" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/khalidboumaghdar/get_next_line.git
-git push -u origin main
