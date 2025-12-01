@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkhalid <bkhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 16:40:59 by bkhalid           #+#    #+#             */
-/*   Updated: 2025/11/30 18:22:48 by bkhalid          ###   ########.fr       */
+/*   Created: 2025/11/29 19:26:39 by bkhalid           #+#    #+#             */
+/*   Updated: 2025/12/01 17:54:34 by bkhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

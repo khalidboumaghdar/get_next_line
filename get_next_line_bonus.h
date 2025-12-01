@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkhalid <bkhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 16:41:09 by bkhalid           #+#    #+#             */
-/*   Updated: 2025/12/01 18:23:13 by bkhalid          ###   ########.fr       */
+/*   Created: 2025/11/30 18:26:13 by bkhalid           #+#    #+#             */
+/*   Updated: 2025/12/01 18:29:56 by bkhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -19,6 +19,7 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
+
 # if BUFFER_SIZE < 0
 #  undef BUFFER_SIZE
 #  define BUFFER_SIZE 0

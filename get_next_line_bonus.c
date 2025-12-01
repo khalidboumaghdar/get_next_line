@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkhalid <bkhalid@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 16:40:49 by bkhalid           #+#    #+#             */
-/*   Updated: 2025/11/30 18:22:15 by bkhalid          ###   ########.fr       */
+/*   Created: 2025/11/29 19:26:42 by bkhalid           #+#    #+#             */
+/*   Updated: 2025/12/01 17:53:49 by bkhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*filter(char *buffer)
 {
@@ -101,20 +101,20 @@ static char	*read_part(int fd, char *stock, char *x)
 
 char	*get_next_line(int fd)
 {
-	static char	*stock;
+	static char	*stock[1024];
 	char		*x;
 	char		*result;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd >= 1024 || BUFFER_SIZE <= 0)
 		return (NULL);
 	x = malloc(BUFFER_SIZE + 1);
 	if (!x)
 		return (NULL);
-	stock = read_part(fd, stock, x);
+	stock[fd] = read_part(fd, stock[fd], x);
 	free(x);
-	if (!stock || *stock == '\0')
+	if (!stock[fd] || *stock[fd] == '\0')
 		return (NULL);
-	result = filter(stock);
-	stock = update_stock(stock);
+	result = filter(stock[fd]);
+	stock[fd] = update_stock(stock[fd]);
 	return (result);
 }
